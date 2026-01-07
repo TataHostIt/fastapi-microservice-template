@@ -1,0 +1,56 @@
+# -----------------------------------------------------------------------
+# DEVELOPMENT CONFIGURATION
+# -----------------------------------------------------------------------
+applicationName: "fastapi-microservice-template"
+environment: "dv"
+namespace: "test-apps"
+replicaCount: 1
+
+containerPort: 8080
+contextPath: "/"
+
+# Image: harbor.tatahostit.com/library/fastapi-microservice-template:dev-latest
+image:
+  registry: "harbor.tatahostit.com"
+  project: "library"
+  tag: ""
+  pullPolicy: Always # Always pull to get the latest code changes
+
+# -----------------------------------------------------------------------
+# NETWORKING
+# -----------------------------------------------------------------------
+ingress:
+  enabled: true
+  hosts:
+    - host: test.tatahostit.com
+
+# -----------------------------------------------------------------------
+# RESOURCES & PROBES
+# -----------------------------------------------------------------------
+resources:
+  requests:
+    cpu: "50m"
+    memory: "128Mi"
+  limits:
+    cpu: "250m"
+    memory: "512Mi"
+
+# Disable probes in Dev to allow faster startup/debugging if app is unhealthy
+livenessProbe:
+  enabled: false
+readinessProbe:
+  enabled: false
+startupProbe:
+  enabled: false
+
+# -----------------------------------------------------------------------
+# CONFIGURATION
+# -----------------------------------------------------------------------
+env:
+  LOG_LEVEL: "debug"
+
+autoscaling:
+  enabled: false
+
+serviceMonitor:
+  enabled: false

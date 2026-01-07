@@ -1,7 +1,7 @@
 # FastAPI Microservice Template
 
 ![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.104.0+-009688.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.128.0+-009688.svg)
 ![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
