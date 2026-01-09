@@ -1,5 +1,5 @@
 # Use the official lightweight Python 3.11 image
-FROM python:3.11-slim
+FROM harbor.tatahostit.com/dockerhub/python:3.11-slim
 
 # Set environment variables
 # PYTHONDONTWRITEBYTECODE: Prevents Python from writing pyc files to disc
