@@ -14,4 +14,4 @@ jobs:
     with:
       app_name: "fastapi-microservice-template"
       environment: "dev"
-      values_file: "helm/values-dev.yaml"
+      values_file: "helm/dev-values.yaml"
