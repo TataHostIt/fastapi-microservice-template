@@ -13,5 +13,5 @@ jobs:
     uses: TataHostIT/pipeline-templates/.github/workflows/build-deploy.yaml@main
     with:
       app_name: "fastapi-microservice-template"
-      environment: "dev"s
+      environment: "dev"
       values_file: "helm/values-dev.yaml"
