@@ -1,4 +1,4 @@
-"""pipeline-test-app"""
+"""fastapi-microservice-template"""
 import os
 
 __version__ = os.getenv("API_TAG_VERSION", "1.0.0")

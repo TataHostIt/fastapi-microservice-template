@@ -9,6 +9,6 @@
 #    done < /etc/config/env
 #fi
 # Kubernetes env vars from values-dv.yaml take precedence - commenting out hardcoded secrets
-echo "Starting pipeline-test-app..."
+echo "Starting fastapi-microservice-template..."
 
 gunicorn app.main:api -c app/gunicorn_config.py

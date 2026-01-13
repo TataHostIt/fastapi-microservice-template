@@ -14,7 +14,7 @@ logger = logging.getLogger("uvicorn.error")
 #
 #   create the api
 #
-api = FastAPI(title=f"pipeline-test-app: {__project_id__}", version=__version__)
+api = FastAPI(title=f"fastapi-microservice-template: {__project_id__}", version=__version__)
 api.add_middleware(
     CORSMiddleware,
     allow_origins='*',

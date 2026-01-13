@@ -115,7 +115,7 @@ docker run -p 8080:8080 my-app:latest
 
 This template includes a specific route designed to test Kubernetes Ingress and Pod identity.
 
-* **Endpoint:** `/pipeline-test-app/test`
+* **Endpoint:** `/fastapi-microservice-template/test`
 * **Method:** `GET`
 * **Response:** An HTML page displaying the serving Pod ID.
 

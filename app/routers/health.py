@@ -8,7 +8,7 @@ from app.health import HealthcheckResponse
 router = APIRouter()
 
 
-@router.get("/pipeline-test-app/healthcheck", response_model=HealthcheckResponse, tags=["health"])
+@router.get("/fastapi-microservice-template/healthcheck", response_model=HealthcheckResponse, tags=["health"])
 def healthcheck() -> HealthcheckResponse:
     message = "Application is running"
     return HealthcheckResponse(

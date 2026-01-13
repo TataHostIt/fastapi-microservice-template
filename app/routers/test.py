@@ -8,7 +8,7 @@ from app.logger import logger
 router = APIRouter()
 
 
-@router.get("/pipeline-test-app/test", tags=["test"], response_class=HTMLResponse)
+@router.get("/fastapi-microservice-template/test", tags=["test"], response_class=HTMLResponse)
 def hello():
     pod_name = os.getenv('HOSTNAME', 'Unknown')
     logger.info(f"Get Request for test, podname: {pod_name}")

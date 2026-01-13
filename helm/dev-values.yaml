@@ -7,7 +7,7 @@ namespace: "test-apps"
 replicaCount: 1
 
 containerPort: 8080
-contextPath: "/"
+contextPath: "/fastapi-microservice-template"
 
 # Image: harbor.tatahostit.com/library/fastapi-microservice-template:dev-latest
 image:
@@ -21,8 +21,19 @@ image:
 # -----------------------------------------------------------------------
 ingress:
   enabled: true
+  className: "nginx-public"
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
   hosts:
     - host: test.tatahostit.com
+      paths:
+        - path: /fastapi-microservice-template
+          pathType: Prefix
+  tls:
+    - secretName: test-tatahostit-com-tls  # <--- Shared Certificate Secret
+      hosts:
+        - test.tatahostit.com
 
 # -----------------------------------------------------------------------
 # RESOURCES & PROBES
